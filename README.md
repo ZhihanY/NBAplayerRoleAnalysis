@@ -19,9 +19,8 @@ Based on WordCloud, we classify words into two categories. The first classificat
 
 | Player Function & Behaviours                | Player Roles                                |
 | --------------------------------------------|-------------------------------------------- |
-| scoring, shooting, dribbling, move,         | shooter, scorer, big man, shot-blocker,      |
-| foul prone, around basket, good defensive,  | playmaker, good rebounder, defensive player, |
-| low post, free throw                        | finisher, post scorer, adequate playmaker |
+| scoring, shooting, dribbling, move, foul prone, around basket, good defensive, low post, free throw   | shooter, scorer, big man,laymaker, good rebounder, defensive player,  shot-blocker, finisher, post scorer, adequate playmaker     |
+     
 
 We manually divided some of the words into two classes based on the WordCloud. Additionally, we seek to more smoothly explain our final decision of player roles due to the fact that the created WordCloud conducts limited information, We use Gensim, which is a Python package, to apply more Natural Language Processing (NLP) techniques instead of human effort. Gensim is specially designed for ‘Topic Modelling for Humans’. If one is unfamiliar with topic modeling, it is a technique to extract the underlying topics from large volumes of text. Compare to NLTK, Gensim is more novice-friendly while performing similar NLP functions. 
 Before we form the WordCloud, we had already cleaned up a text string with all the tokenized words included, so we continue to create a corpus using Gensim functions. After that, we use a Latent Dirichlet allocation model to cluster 8 topics. In fact, it seems that topics 1,4 and 7 focus on the same topic, which is playmakers and combo guards; topic 3, 6 focus on shooters and topic 5 focuses on inside players.
